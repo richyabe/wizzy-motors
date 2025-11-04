@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Wizzy Motor Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css"> <!-- Reuse the main CSS -->
+    <style>
+        /* Specific styles for the details page */
+        .car-details-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .car-details-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .car-details-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .car-details-info h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .car-details-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .car-details-specs {
+            margin: 1.5rem 0;
+        }
+
+        .car-details-specs ul {
+            list-style: none;
+        }
+
+        .car-details-specs li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .car-details-specs li:last-child {
+            border-bottom: none;
+        }
+
+        .car-details-description {
+            margin-top: 1.5rem;
+        }
+
+        .car-details-description p {
+            margin-bottom: 1rem;
+        }
+
+        .back-to-inventory {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: var(--gray);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .back-to-inventory:hover {
+            background: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .car-details-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-car"></i>
+            <h1>WIZZY MOTOR STORE</h1>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#inventory">Inventory</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="details.html">Car Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="car-details-container">
+            <h1>Car Details</h1>
+            <div id="loadingMessage">Loading car details...</div>
+            <div id="carDetailsContent" class="car-details-content" style="display: none;">
+                <div class="car-details-image">
+                    <img id="detailImage" src="" alt="Car Detail Image">
+                </div>
+                <div class="car-details-info">
+                    <h2 id="detailTitle">Car Title</h2>
+                    <div class="car-details-price" id="detailPrice">$0,000</div>
+                    <div class="car-details-specs">
+                        <ul id="detailSpecs">
+                            <!-- Specs will be populated by JS -->
+                        </ul>
+                    </div>
+                    <div class="car-details-description">
+                        <p id="detailDescription">Detailed description of the car...</p>
+                    </div>
+                    <a href="index.html#inventory" class="back-to-inventory">Back to Inventory</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 Wisdom Motor Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sample car data (In a real application, this would come from a database)
+        const carData = {
+            "mercedes-s-class": {
+                title: "Mercedes-Benz S-Class",
+                price: "$110,900",
+                image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Hybrid' },
+                    { icon: 'fas fa-tachometer-alt', text: '429 HP' },
+                    { icon: 'fas fa-car', text: 'Sedan' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 80L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 2,100 kg' }
+                ],
+                description: "Experience the pinnacle of luxury with the Mercedes-Benz S-Class. This flagship sedan combines cutting-edge technology with unparalleled comfort, offering a serene and powerful driving experience. The hybrid powertrain delivers both performance and efficiency, while the meticulously crafted interior provides a first-class cabin environment."
+            },
+            // Add more car objects here with unique IDs
+            "bmw-x5": {
+                title: "BMW X5 xDrive40i",
+                price: "$65,700",
+                image: "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Gasoline' },
+                    { icon: 'fas fa-tachometer-alt', text: '335 HP' },
+                    { icon: 'fas fa-car', text: 'SUV' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 85L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 2,150 kg' }
+                ],
+                description: "The BMW X5 xDrive40i is a benchmark in the luxury SUV segment, offering a perfect blend of performance, space, and premium features. With its powerful engine and advanced all-wheel-drive system, it handles both city streets and off-road adventures with confidence."
+            },
+            "audi-a7": {
+                title: "Audi A7 Premium Plus",
+                price: "$69,200",
+                image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Gasoline' },
+                    { icon: 'fas fa-tachometer-alt', text: '335 HP' },
+                    { icon: 'fas fa-car', text: 'Coupe' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 75L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 1,950 kg' }
+                ],
+                description: "The Audi A7 Premium Plus is a stunning grand tourer that combines elegant design with dynamic performance. Its distinctive fastback silhouette, coupled with a luxurious and tech-forward interior, makes it a compelling choice for those seeking a unique luxury sedan experience."
+            },
+            "porsche-911": {
+                title: "Porsche 911 Turbo S",
+                price: "$225,500",
+                image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Gasoline' },
+                    { icon: 'fas fa-tachometer-alt', text: '640 HP' },
+                    { icon: 'fas fa-car', text: 'Sports Car' },
+                    { icon: 'fas fa-cogs', text: 'PDK Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 64L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 1,570 kg' }
+                ],
+                description: "The Porsche 911 Turbo S is the ultimate expression of the 911 sports car. With its twin-turbo flat-six engine, it delivers breathtaking acceleration and handling, making it a driver's car that's also refined enough for everyday use."
+            },
+            "lexus-ls": {
+                title: "Lexus LS 500h",
+                price: "$76,850",
+                image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Hybrid' },
+                    { icon: 'fas fa-tachometer-alt', text: '354 HP' },
+                    { icon: 'fas fa-car', text: 'Sedan' },
+                    { icon: 'fas fa-cogs', text: 'Multi-Stage Hybrid CVT' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 80L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 2,150 kg' }
+                ],
+                description: "The Lexus LS 500h represents the pinnacle of Lexus luxury. It offers a remarkably quiet and comfortable ride, paired with advanced hybrid technology for efficiency, without compromising on the performance expected from a flagship sedan."
+            },
+            "ferrari-sf90": {
+                title: "Ferrari SF90 Stradale",
+                price: "$625,000",
+                image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                specs: [
+                    { icon: 'fas fa-bolt', text: 'Plug-in Hybrid' },
+                    { icon: 'fas fa-tachometer-alt', text: '986 HP' },
+                    { icon: 'fas fa-car', text: 'Supercar' },
+                    { icon: 'fas fa-cogs', text: 'F1 DCT Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 68L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 1,570 kg' }
+                ],
+                description: "The Ferrari SF90 Stradale is a revolutionary supercar, marking Ferrari's first series-production plug-in hybrid. It combines a twin-turbo V8 engine with three electric motors for an incredible 986 horsepower, delivering unprecedented performance and a glimpse into Ferrari's electric future."
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const carId = urlParams.get('carId');
+
+            const loadingMessage = document.getElementById('loadingMessage');
+            const contentDiv = document.getElementById('carDetailsContent');
+            const detailImage = document.getElementById('detailImage');
+            const detailTitle = document.getElementById('detailTitle');
+            const detailPrice = document.getElementById('detailPrice');
+            const detailSpecsList = document.getElementById('detailSpecs');
+            const detailDescription = document.getElementById('detailDescription');
+
+            if (carId && carData[carId]) {
+                const car = carData[carId];
+
+                detailImage.src = car.image;
+                detailImage.alt = car.title;
+                detailTitle.textContent = car.title;
+                detailPrice.textContent = car.price;
+                detailDescription.textContent = car.description;
+
+                // Clear previous specs
+                detailSpecsList.innerHTML = '';
+
+                // Populate specs
+                car.specs.forEach(spec => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<i class="${spec.icon}"></i> ${spec.text}`;
+                    detailSpecsList.appendChild(li);
+                });
+
+                loadingMessage.style.display = 'none';
+                contentDiv.style.display = 'block';
+            } else {
+                loadingMessage.textContent = 'Car details not found.';
+            }
+
+            // Mobile Navigation Toggle (copied from index.js)
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
