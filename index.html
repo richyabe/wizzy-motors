@@ -1,11 +1,11 @@
-!<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisdom Motor Store - Premium Car Dealership</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-
+    <link rel="stylesheet" href="index.css"> <!-- Link to your updated CSS -->
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -23,7 +23,9 @@
                 <li><a href="#inventory">Inventory</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="details.html">Car Details</a></li> <!-- Link to new page -->
             </ul>
         </nav>
     </header>
@@ -64,6 +66,26 @@
                 <h3>Competitive Pricing</h3>
                 <p>Unbeatable value with transparent pricing and flexible financing options for every budget.</p>
             </div>
+             <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>Dedicated Support</h3>
+                <p>Personalized assistance throughout your ownership journey, ensuring satisfaction and peace of mind.</p>
+            </div>
+             <div class="feature-card">
+                <i class="fas fa-globe"></i>
+                <h3>Global Network</h3>
+                <p>Access to a worldwide network of service centers and parts, wherever your adventures take you.</p>
+            </div>
+             <div class="feature-card">
+                <i class="fas fa-star"></i>
+                <h3>Trusted Since 2005</h3>
+                <p>Over 15 years of experience in luxury car sales and service, earning the trust of thousands of customers.</p>
+            </div>
+             <div class="feature-card">
+                <i class="fas fa-user-check"></i>
+                <h3>Verified Sellers</h3>
+                <p>All our pre-owned vehicles come with a comprehensive history report and verification process.</p>
+            </div>
         </div>
     </section>
 
@@ -71,6 +93,7 @@
     <section class="inventory" id="inventory">
         <h2 class="section-title">Featured Vehicles</h2>
         <div class="cars-grid">
+            <!-- Car Card 1 -->
             <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mercedes-Benz S-Class">
@@ -83,13 +106,14 @@
                         <span><i class="fas fa-car"></i> Sedan</span>
                     </div>
                     <div class="price">$110,900</div>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="details.html?carId=mercedes-s-class" class="btn view-details-btn">View Details</a>
                 </div>
             </div>
-            
+
+            <!-- Car Card 2 -->
             <div class="car-card">
                 <div class="car-image">
-                    <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="BMW X5">
+                    <img src="https://images.unsplash.com/photo-1586166417450-7a475d879c51?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627" alt="BMW X5">
                 </div>
                 <div class="car-info">
                     <h3>BMW X5 xDrive40i</h3>
@@ -99,13 +123,14 @@
                         <span><i class="fas fa-car"></i> SUV</span>
                     </div>
                     <div class="price">$65,700</div>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="details.html?carId=bmw-x5" class="btn view-details-btn">View Details</a>
                 </div>
             </div>
-            
+
+            <!-- Car Card 3 -->
             <div class="car-card">
                 <div class="car-image">
-                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Audi A7">
+                    <img src="https://images.unsplash.com/photo-1720125795071-724bbfbfaf61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="Audi A7">
                 </div>
                 <div class="car-info">
                     <h3>Audi A7 Premium Plus</h3>
@@ -115,8 +140,209 @@
                         <span><i class="fas fa-car"></i> Coupe</span>
                     </div>
                     <div class="price">$69,200</div>
-                    <a href="#" class="btn">View Details</a>
+                    <a href="details.html?carId=audi-a7" class="btn view-details-btn">View Details</a>
                 </div>
+            </div>
+
+            <!-- Car Card 4 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1732815000791-886d5fb778d3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1472" alt="Porsche 911">
+                </div>
+                <div class="car-info">
+                    <h3>Porsche 911 Turbo S</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-gas-pump"></i> Gasoline</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 640 HP</span>
+                        <span><i class="fas fa-car"></i> Sports Car</span>
+                    </div>
+                    <div class="price">$225,500</div>
+                    <a href="details.html?carId=porsche-911" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Car Card 5 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1605429652990-aa0a49ec89ba?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=698" alt="Lexus LS">
+                </div>
+                <div class="car-info">
+                    <h3>Lexus LS 500h</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 354 HP</span>
+                        <span><i class="fas fa-car"></i> Sedan</span>
+                    </div>
+                    <div class="price">$76,850</div>
+                    <a href="details.html?carId=lexus-ls" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Car Card 6 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1740806417439-490dba0d926a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687" alt="Ferrari SF90">
+                </div>
+                <div class="car-info">
+                    <h3>Ferrari SF90 Stradale</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-bolt"></i> Plug-in Hybrid</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 986 HP</span>
+                        <span><i class="fas fa-car"></i> Supercar</span>
+                    </div>
+                    <div class="price">$625,000</div>
+                    <a href="details.html?carId=ferrari-sf90" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+             <!-- Car Card 7 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1728458602333-c0fdc3ece8a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="Rolls-Royce Ghost">
+                </div>
+                <div class="car-info">
+                    <h3>Rolls-Royce Ghost</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-gas-pump"></i> Gasoline</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 563 HP</span>
+                        <span><i class="fas fa-car"></i> Sedan</span>
+                    </div>
+                    <div class="price">$330,000</div>
+                    <a href="details.html?carId=rolls-royce-ghost" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+             <!-- Car Card 8 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1741905358565-5ae6835ac172?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1374" alt="Land Rover Defender">
+                </div>
+                <div class="car-info">
+                    <h3>Land Rover Defender</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 395 HP</span>
+                        <span><i class="fas fa-car"></i> SUV</span>
+                    </div>
+                    <div class="price">$85,500</div>
+                    <a href="details.html?carId=land-rover-defender" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+             <!-- Car Card 9 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1716558964076-1abe07448abf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="Tesla Model S">
+                </div>
+                <div class="car-info">
+                    <h3>Tesla Model S Plaid</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-bolt"></i> Electric</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 1020 HP</span>
+                        <span><i class="fas fa-car"></i> Sedan</span>
+                    </div>
+                    <div class="price">$135,990</div>
+                    <a href="details.html?carId=tesla-model-s" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Car Card 10 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2232" alt="Ferrari F8 Tributo">
+                </div>
+                <div class="car-info">
+                    <h3>Ferrari F8 Tributo</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-gas-pump"></i> Gasoline</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 710 HP</span>
+                        <span><i class="fas fa-car"></i> Supercar</span>
+                    </div>
+                    <div class="price">$285,000</div>
+                    <a href="details.html?carId=ferrari-f8-tributo" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Car Card 11 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1653468917932-bf707f983a0c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1469" alt="Jaguar F-Type">
+                </div>
+                <div class="car-info">
+                    <h3>Jaguar F-Type R</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-gas-pump"></i> Gasoline</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 567 HP</span>
+                        <span><i class="fas fa-car"></i> Convertible</span>
+                    </div>
+                    <div class="price">$102,000</div>
+                    <a href="details.html?carId=jaguar-f-type" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Car Card 12 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1530505849655-e0a1121554a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="Maserati Quattroporte">
+                </div>
+                <div class="car-info">
+                    <h3>Maserati Quattroporte Trofeo</h3>
+                    <div class="car-specs">
+                        <span><i class="fas fa-gas-pump"></i> Gasoline</span>
+                        <span><i class="fas fa-tachometer-alt"></i> 572 HP</span>
+                        <span><i class="fas fa-car"></i> Sedan</span>
+                    </div>
+                    <div class="price">$175,500</div>
+                    <a href="details.html?carId=maserati-quattroporte" class="btn view-details-btn">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="features" id="services"> <!-- Reusing features styling -->
+        <h2 class="section-title">Our Services</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-car"></i>
+                <h3>Vehicle Purchase</h3>
+                <p>Find your perfect car from our extensive inventory with personalized assistance from our experts.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Financing Options</h3>
+                <p>Flexible and competitive financing solutions tailored to your needs and budget.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-car-side"></i>
+                <h3>Leasing Programs</h3>
+                <p>Drive the latest models with our attractive leasing options designed for individuals and businesses.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tools"></i>
+                <h3>Maintenance & Service</h3>
+                <p>Keep your vehicle running at its best with our comprehensive maintenance and repair services.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Trade-In Appraisal</h3>
+                <p>Get a fair and competitive quote for your current vehicle when you trade up.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-car-crash"></i>
+                <h3>Extended Warranties</h3>
+                <p>Protect your investment with our range of extended warranty plans.</p>
+            </div>
+             <div class="feature-card">
+                <i class="fas fa-car-battery"></i>
+                <h3>EV Charging Solutions</h3>
+                <p>Installation and support for home and business electric vehicle charging stations.</p>
+            </div>
+             <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h3>Security & Tracking</h3>
+                <p>Advanced security systems and GPS tracking devices for ultimate peace of mind.</p>
             </div>
         </div>
     </section>
@@ -135,7 +361,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="testimonial-card">
                 <p>The quality inspection process was thorough and transparent. I felt confident in my purchase and the after-sales service has been excellent.</p>
                 <div class="client">
@@ -146,7 +372,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="testimonial-card">
                 <p>As a car enthusiast, I appreciate the attention to detail and the knowledgeable staff. They truly understand what makes a car special.</p>
                 <div class="client">
@@ -157,6 +383,62 @@
                     </div>
                 </div>
             </div>
+
+             <div class="testimonial-card">
+                <p>Fast, efficient, and professional. My trade-in was appraised fairly, and the paperwork was handled seamlessly.</p>
+                <div class="client">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
+                    <div class="client-info">
+                        <h4>Emily Rodriguez</h4>
+                        <p>Traded in for a Tesla Model S</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="testimonial-card">
+                <p>The leasing terms were exactly what I needed. The staff was patient and explained everything clearly.</p>
+                <div class="client">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Client">
+                    <div class="client-info">
+                        <h4>David Kim</h4>
+                        <p>Leased a Porsche 911</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="testimonial-card">
+                <p>Outstanding customer service from start to finish. Highly recommended!</p>
+                <div class="client">
+                    <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Client">
+                    <div class="client-info">
+                        <h4>Lisa Thompson</h4>
+                        <p>Purchased a Lexus LS</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="testimonial-card">
+                <p>The service department fixed my car quickly and kept me informed throughout the process. Excellent work!</p>
+                <div class="client">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client">
+                    <div class="client-info">
+                        <h4>James Wilson</h4>
+                        <p>Service for Ferrari SF90</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="testimonial-card">
+                <p>Found my perfect vintage car here. The team's passion for automobiles is evident in everything they do.</p>
+                <div class="client">
+                    <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Client">
+                    <div class="client-info">
+                        <h4>Patricia Lee</h4>
+                        <p>Special Order</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -167,7 +449,7 @@
             <div class="contact-info">
                 <h3>Contact Information</h3>
                 <p>Have questions about our inventory or services? Our team is ready to assist you. Fill out the form or contact us directly.</p>
-                
+
                 <div class="contact-details">
                     <div>
                         <i class="fas fa-map-marker-alt"></i>
@@ -176,23 +458,53 @@
                             <p>123 Luxury Drive, Prestige City, PC 10001</p>
                         </div>
                     </div>
-                    
+
                     <div>
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Phone: </h4>
-                            <p>09079108647</p>
+                            <p>+2347018586234</p>
                         </div>
                     </div>
-                    
+
                     <div>
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email: </h4>
-                            <p><a href="https://www.google.com/">scootfaith12@gmail.com</a></p>
+                            <p>
+                              <a href="mailto:aberichard08@gmail.com"
+                                 style="display:inline-block;
+                                        padding:12px 26px;
+                                        background:linear-gradient(135deg, #111, #1a1a1a);
+                                        color:#e6c97f;
+                                        font-family:'Inter', 'Poppins', sans-serif;
+                                        font-size:15px;
+                                        font-weight:600;
+                                        letter-spacing:0.6px;
+                                        text-decoration:none;
+                                        border:1px solid rgba(230,201,127,0.4);
+                                        border-radius:40px;
+                                        box-shadow:0 0 0 rgba(230,201,127,0);
+                                        transition:all 0.35s ease;
+                                        text-transform:lowercase;"
+                                 onmouseover="this.style.background='linear-gradient(135deg, #e6c97f, #d4af37)'; 
+                                              this.style.color='#111'; 
+                                              this.style.boxShadow='0 8px 25px rgba(212,175,55,0.4)'; 
+                                              this.style.transform='translateY(-3px)';"
+                                 onmouseout="this.style.background='linear-gradient(135deg, #111, #1a1a1a)'; 
+                                             this.style.color='#e6c97f'; 
+                                             this.style.boxShadow='0 0 0 rgba(212,175,55,0)'; 
+                                             this.style.transform='translateY(0)';"
+                                 onmousedown="this.style.transform='scale(0.97)';"
+                                 onmouseup="this.style.transform='scale(1)';">
+                                  aberichard08@gmail.com
+                                </a>
+                            </p>
+
+
                         </div>
                     </div>
-                    
+
                     <div>
                         <i class="fas fa-clock"></i>
                         <div>
@@ -203,39 +515,37 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="contact-form">
-  <form id="contactForm">
-    <div class="form-group">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-    </div>
-    <div class="form-group">
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="Enter your phone number">
-    </div>
-    <div class="form-group">
-      <label for="interest">Interest</label>
-      <select id="interest" required>
-        <option value="">Select your interest</option>
-        <option value="Vehicle Purchase">Vehicle Purchase</option>
-        <option value="Service Appointment">Service Appointment</option>
-        <option value="Financing Options">Financing Options</option>
-        <option value="General Inquiry">General Inquiry</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" placeholder="Tell us about your needs..." required></textarea>
-    </div>
-    <button type="submit" class="btn">Send via WhatsApp</button>
-  </form>
-</div>
-            
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interest</label>
+                        <select id="interest" required>
+                            <option value="">Select your interest</option>
+                            <option value="Vehicle Purchase">Vehicle Purchase</option>
+                            <option value="Service Appointment">Service Appointment</option>
+                            <option value="Financing Options">Financing Options</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us about your needs..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send via WhatsApp</button>
+                </form>
             </div>
         </div>
     </section>
@@ -256,7 +566,7 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -264,21 +574,26 @@
                     <li><a href="#inventory">Inventory</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="details.html">Car Details</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Services</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Vehicle Purchase</a></li>
-                    <li><a href="#">Financing Options</a></li>
-                    <li><a href="#">Leasing Programs</a></li>
-                    <li><a href="#">Maintenance & Service</a></li>
-                    <li><a href="#">Trade-In Appraisal</a></li>
+                    <li><a href="#services">Vehicle Purchase</a></li>
+                    <li><a href="#services">Financing Options</a></li>
+                    <li><a href="#services">Leasing Programs</a></li>
+                    <li><a href="#services">Maintenance & Service</a></li>
+                    <li><a href="#services">Trade-In Appraisal</a></li>
+                    <li><a href="#services">Extended Warranties</a></li>
+                    <li><a href="#services">EV Charging Solutions</a></li>
+                    <li><a href="#services">Security & Tracking</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Newsletter</h3>
                 <p>Subscribe to our newsletter for the latest updates on new arrivals and exclusive offers.</p>
@@ -290,76 +605,12 @@
                 </form>
             </div>
         </div>
-        
+
         <div class="copyright">
-            <p>&copy; 2023 Wisdom Motor Store. All rights reserved.</p>
+            <p>&copy; 2025 Wisdom Motor Store. All rights reserved. <bold>CREATED BY RICHARD</bold></p>
         </div>
     </footer>
 
-    <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                // Close mobile menu if open
-                navMenu.classList.remove('show');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Sticky header on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
-        
-        // Form submission handling
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            if(name) {
-                alert(`Thank you, ${name}! Your message has been sent. We'll contact you soon.`);
-                contactForm.reset();
-            } else {
-                alert('Please fill in your name.');
-            }
-        });
-        
-        
-        // Add animation to elements when they come into view
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements
-        document.querySelectorAll('.feature-card, .car-card, .testimonial-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
-    <script src="index.js"></script>
+    <script src="index.js"></script> <!-- Link to your updated JS -->
 </body>
 </html>
