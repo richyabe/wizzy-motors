@@ -105,6 +105,7 @@
                 <li><a href="index.html#inventory">Inventory</a></li>
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="details.html">Car Details</a></li>
             </ul>
@@ -144,6 +145,7 @@
 
     <script>
         // Sample car data (In a real application, this would come from a database)
+        // Updated to use valid Unsplash links for all images
         const carData = {
             "mercedes-s-class": {
                 title: "Mercedes-Benz S-Class",
@@ -159,11 +161,10 @@
                 ],
                 description: "Experience the pinnacle of luxury with the Mercedes-Benz S-Class. This flagship sedan combines cutting-edge technology with unparalleled comfort, offering a serene and powerful driving experience. The hybrid powertrain delivers both performance and efficiency, while the meticulously crafted interior provides a first-class cabin environment."
             },
-            // Add more car objects here with unique IDs
             "bmw-x5": {
                 title: "BMW X5 xDrive40i",
                 price: "$65,700",
-                image: "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                image: "https://images.unsplash.com/photo-1586166417450-7a475d879c51?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627",
                 specs: [
                     { icon: 'fas fa-gas-pump', text: 'Gasoline' },
                     { icon: 'fas fa-tachometer-alt', text: '335 HP' },
@@ -177,7 +178,7 @@
             "audi-a7": {
                 title: "Audi A7 Premium Plus",
                 price: "$69,200",
-                image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                image: "https://images.unsplash.com/photo-1720125795071-724bbfbfaf61?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
                 specs: [
                     { icon: 'fas fa-gas-pump', text: 'Gasoline' },
                     { icon: 'fas fa-tachometer-alt', text: '335 HP' },
@@ -191,7 +192,7 @@
             "porsche-911": {
                 title: "Porsche 911 Turbo S",
                 price: "$225,500",
-                image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                image: "https://images.unsplash.com/photo-1732815000791-886d5fb778d3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1472",
                 specs: [
                     { icon: 'fas fa-gas-pump', text: 'Gasoline' },
                     { icon: 'fas fa-tachometer-alt', text: '640 HP' },
@@ -205,7 +206,7 @@
             "lexus-ls": {
                 title: "Lexus LS 500h",
                 price: "$76,850",
-                image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                image: "https://images.unsplash.com/photo-1605429652990-aa0a49ec89ba?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=698",
                 specs: [
                     { icon: 'fas fa-gas-pump', text: 'Hybrid' },
                     { icon: 'fas fa-tachometer-alt', text: '354 HP' },
@@ -219,7 +220,7 @@
             "ferrari-sf90": {
                 title: "Ferrari SF90 Stradale",
                 price: "$625,000",
-                image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+                image: "https://images.unsplash.com/photo-1740806417439-490dba0d926a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
                 specs: [
                     { icon: 'fas fa-bolt', text: 'Plug-in Hybrid' },
                     { icon: 'fas fa-tachometer-alt', text: '986 HP' },
@@ -229,6 +230,90 @@
                     { icon: 'fas fa-weight', text: 'Weight: 1,570 kg' }
                 ],
                 description: "The Ferrari SF90 Stradale is a revolutionary supercar, marking Ferrari's first series-production plug-in hybrid. It combines a twin-turbo V8 engine with three electric motors for an incredible 986 horsepower, delivering unprecedented performance and a glimpse into Ferrari's electric future."
+            },
+            "rolls-royce-ghost": {
+                title: "Rolls-Royce Ghost",
+                price: "$330,000",
+                image: "https://images.unsplash.com/photo-1728458602333-c0fdc3ece8a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Gasoline' },
+                    { icon: 'fas fa-tachometer-alt', text: '563 HP' },
+                    { icon: 'fas fa-car', text: 'Sedan' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 83L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 2,560 kg' }
+                ],
+                description: "The Rolls-Royce Ghost epitomizes luxury and refinement. With its whisper-quiet interior, handcrafted details, and effortless power, it provides an unparalleled driving experience for those who demand the very best."
+            },
+            "land-rover-defender": {
+                title: "Land Rover Defender",
+                price: "$85,500",
+                image: "https://images.unsplash.com/photo-1741905358565-5ae6835ac172?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1374",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Diesel' },
+                    { icon: 'fas fa-tachometer-alt', text: '395 HP' },
+                    { icon: 'fas fa-car', text: 'SUV' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 85L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 2,445 kg' }
+                ],
+                description: "The Land Rover Defender is the ultimate off-road machine, built for adventure. It combines legendary all-terrain capability with modern comfort and technology, making it perfect for exploring the impossible."
+            },
+            "tesla-model-s": {
+                title: "Tesla Model S Plaid",
+                price: "$135,990",
+                image: "https://images.unsplash.com/photo-1716558964076-1abe07448abf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
+                specs: [
+                    { icon: 'fas fa-bolt', text: 'Electric' },
+                    { icon: 'fas fa-tachometer-alt', text: '1020 HP' },
+                    { icon: 'fas fa-car', text: 'Sedan' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-battery-full', text: 'Range: 396 miles (EPA est.)' },
+                    { icon: 'fas fa-weight', text: 'Weight: 2,250 kg' }
+                ],
+                description: "The Tesla Model S Plaid redefines performance with its tri-motor setup delivering insane acceleration and cutting-edge technology. It's a glimpse into the future of electric motoring, combining speed, efficiency, and innovation."
+            },
+            "ferrari-f8-tributo": {
+                title: "Ferrari F8 Tributo",
+                price: "$285,000",
+                image: "https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2232",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Gasoline' },
+                    { icon: 'fas fa-tachometer-alt', text: '710 HP' },
+                    { icon: 'fas fa-car', text: 'Supercar' },
+                    { icon: 'fas fa-cogs', text: 'F1 DCT Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 68L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 1,330 kg' }
+                ],
+                description: "The Ferrari F8 Tributo is a mid-rear-engined sports car that pays homage to the legendary F40. It features a twin-turbo V8 engine producing 710 horsepower, offering incredible performance and an emotional driving experience."
+            },
+            "jaguar-f-type": {
+                title: "Jaguar F-Type R",
+                price: "$102,000",
+                image: "https://images.unsplash.com/photo-1653468917932-bf707f983a0c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1469",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Gasoline' },
+                    { icon: 'fas fa-tachometer-alt', text: '567 HP' },
+                    { icon: 'fas fa-car', text: 'Convertible' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 70L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 1,722 kg' }
+                ],
+                description: "The Jaguar F-Type R Convertible is a stunning two-seater that combines elegant design with raw performance. Its supercharged V8 engine delivers thrilling acceleration, while the open-top driving experience provides pure exhilaration."
+            },
+            "maserati-quattroporte": {
+                title: "Maserati Quattroporte Trofeo",
+                price: "$175,500",
+                image: "https://images.unsplash.com/photo-1530505849655-e0a1121554a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
+                specs: [
+                    { icon: 'fas fa-gas-pump', text: 'Gasoline' },
+                    { icon: 'fas fa-tachometer-alt', text: '572 HP' },
+                    { icon: 'fas fa-car', text: 'Sedan' },
+                    { icon: 'fas fa-cogs', text: 'Automatic' },
+                    { icon: 'fas fa-tint', text: 'Fuel Capacity: 90L' },
+                    { icon: 'fas fa-weight', text: 'Weight: 1,980 kg' }
+                ],
+                description: "The Maserati Quattroporte Trofeo is the most powerful sedan in the Maserati lineup. It features a twin-turbo V8 engine producing 572 horsepower, delivering a unique blend of luxury, performance, and the iconic Maserati sound."
             }
         };
 
